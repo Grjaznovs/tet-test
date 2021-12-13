@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+            <link rel="stylesheet" href="{{ asset('build/bootstrap.min.css') }}">
+        {% endblock %}
+        
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <header class="header">
+
+        </header>
+
+        {% for message in app.flashes('danger') %}
+            <div class="alert alert-danger">
+                {{ message }}
+            </div>
+        {% endfor %}
+        <main role="main" class="container mt-5">
+            {% block body %}{% endblock %}
+        </main>
+
+        <footer class="mt-7 px-3 py-5 text-center text-muted">
+
+        </footer>
+
+        <script type="text/javascript" src="{{ asset('build/jquery.min.js') }}"></script>
+        {% block javascripts %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+    </body>
+</html>
