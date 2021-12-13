@@ -1,9 +1,9 @@
  <h2>Instrukcija projekta palaišanai</h2>
 Palaižam Windows Terminal un rakstam
 <pre>wsl</pre>
-Ejam uz sākotnejas mapes sakumu
+Ejam uz sākotnejas mapes sākumu
 <pre>cd ~</pre>
-Tālāk tiek klonets projekts no manas repozitorijas
+Tālāk tiek klonēts projekts no manas repozitorijas
 <pre>git clone https://github.com/Grjaznovs/tet-test.git</pre>
 Pēc kā pārbaudam direktoriju
 <pre>dir</pre>
@@ -28,7 +28,7 @@ Nākamais solis - veidojam tabulas datubāzē, izmantojot kontroļu versijas sis
 Tālāk pārbaudam kādas sistēmas ir palaistas
 <pre>docker ps</pre>
 kur mūs interesē "postgres:13-alpine" un tā CONTAINER ID palaistais konteineris, kuru arī ierakstam change_to_CONTAINER_ID vietā
-<pre>docker exec -it change_to_CONTAINER_ID bash<br/>docker exec -it 890b98fbefa1 bash</pre>
+<pre>docker exec -it change_to_CONTAINER_ID bash<br/>piemērām: docker exec -it 890b98fbefa1 bash</pre>
 
 Tālāk ir jāieiet datubāzē
 <pre>psql --host=database --username=symfony --dbname=app<br/>pass:ChangeMe</pre>
